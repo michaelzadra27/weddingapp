@@ -11,12 +11,14 @@ app.use(express.urlencoded({limit: '50mb', extended: true}));
 
 app.get('/api/images', async (req, res) => {
     console.log("hit")
-    const {resources} = await cloudinary.search.expression('folder:wedding_uploads').sort_by('public_id', 'desc').max_results(30).execute();
-    console.log("done")
+    const {resources} = await cloudinary.search.expression('folder:weddingapp').sort_by('public_id', 'desc').max_results(30).execute();
+    
+    // .then(result=>console.log(result)
+    // console.log("done")
 
     const publicIds = resources.map(file => file.public_id)
     res.json(publicIds)
-    console.log("files sens")
+    
     
 })
 
