@@ -12,7 +12,7 @@ function Main() {
             console.log(data)
             setImageIds(data);
         } catch (error) {
-            console.error(error)
+            
         }
     }
     useEffect(() =>{
