@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 // const { cloudinary } = require('./utils/cloudinary');
 const path = require('path');
+require('dotenv').config();
 
 //get server set up on production or local PORT
 
