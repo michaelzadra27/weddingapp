@@ -19,7 +19,7 @@
     "concurrently": "^7.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/server.js",
     "develop": "concurrently \"npm start\" \"cd server && node server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,6 +43,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://localhost:3001",
   "devDependencies": {
     "concurrently": "^7.1.0"
   }
