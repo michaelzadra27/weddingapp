@@ -6,6 +6,7 @@ function Main() {
     const [imageIds, setImageIds] = useState();
 
     const loadImages = async () => {
+        console.log("trying to load")
         try {
             const res = await fetch('/api/images');
             const data = await res.json();
