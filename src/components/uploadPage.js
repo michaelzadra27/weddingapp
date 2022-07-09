@@ -43,7 +43,7 @@ function UploadPage() {
 
     return (
         <div>
-            <h1>Brenda & Michael</h1>
+            <h1>Brenda + Michael</h1>
             <h2>Please share your photos with us!</h2>
             <form onSubmit={handleFileSubmit}>
                 <input type="file"

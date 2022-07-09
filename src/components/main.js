@@ -22,7 +22,7 @@ function Main() {
     return (
         <div>
             <h1 className='title'>MAIN</h1>
-            {imageIds && imageIds.map((imageId, index) => (
+            {/* {imageIds && imageIds.map((imageId, index) => (
                 <Image
                 key={index}
                 cloudName='dcteqhlcf'
@@ -30,7 +30,7 @@ function Main() {
                 width="300"
                 crop="scale"
                 />
-            ))}
+            ))} */}
         </div>
     );
 }

@@ -4,7 +4,8 @@ const { cloudinary } = require('./utils/cloudinary');
 
 //get server set up on production or local PORT
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001;
+app.use(express.static(__dirname + '/'));
 
 app.use(express.json({ limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true}));
