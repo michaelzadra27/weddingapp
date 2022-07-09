@@ -19,8 +19,7 @@
     "concurrently": "^7.1.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "react-scripts start",
     "develop": "concurrently \"npm start\" \"cd server && node server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
