@@ -20,14 +20,16 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('/api/images', async (req, res) => {
     console.log("hit")
+    try {
     const {resources} = await cloudinary.search.expression('folder:weddingapp').sort_by('public_id', 'desc').max_results(30).execute();
     
-    // .then(result=>console.log(result)
-    // console.log("done")
+   
 
     const publicIds = resources.map(file => file.public_id)
     res.json(publicIds)
-    
+    } catch (error){
+        
+    }
     
 })
 
