@@ -56,3 +56,5 @@ app.get('*', function (req, res) {
 app.listen(PORT, ()=> {
     console.log(`listening on PORT ${PORT}`);
 });
+
+console.log("done with server")
