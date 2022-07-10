@@ -1,7 +1,7 @@
 console.log("SERVERRR")
 const express = require('express');
 const app = express();
-// const { cloudinary } = require('./utils/cloudinary');
+const { cloudinary } = require('./utils/cloudinary');
 const path = require('path');
 require('dotenv').config();
 
