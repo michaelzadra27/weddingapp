@@ -28,8 +28,8 @@ app.get('/api/images', async (req, res) => {
         const publicIds = resources.map(file => file.public_id)
         res.json(publicIds)
     } catch (error) {
-        // console.error(error)
-        // res.status(500).json({ err: 'Trying to get images from Cloudinary' })
+        console.error(error)
+        res.status(500).json({ err: 'Trying to get images from Cloudinary' })
 
     }
 
