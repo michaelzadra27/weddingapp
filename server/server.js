@@ -1,7 +1,7 @@
 console.log("SERVERRR")
 const express = require('express');
 const app = express();
-const {cloudinary} = require('./utils/cloudinary')
+const { cloudinary } = require('./utils/cloudinary')
 const path = require('path');
 require('dotenv').config();
 
@@ -10,8 +10,8 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3001;
 // app.use(express.static(__dirname + '/'));
 
-app.use(express.json({ limit: '50mb'}));
-app.use(express.urlencoded({limit: '50mb', extended: true}));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
@@ -21,16 +21,18 @@ if (process.env.NODE_ENV === 'production') {
 app.get('/api/images', async (req, res) => {
     console.log("hit")
     try {
-    const {resources} = await cloudinary.search.expression('folder:weddingapp').sort_by('public_id', 'desc').max_results(30).execute();
-    
-   
+        const { resources } = await cloudinary.search.expression('folder:weddingapp').sort_by('public_id', 'desc').max_results(30).execute();
 
-    const publicIds = resources.map(file => file.public_id)
-    res.json(publicIds)
-    } catch (error){
-        
+
+
+        const publicIds = resources.map(file => file.public_id)
+        res.json(publicIds)
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({ err: 'Trying to get images from Cloudinary' })
+
     }
-    
+
 })
 
 app.post('/api/upload', async (req, res) => {
@@ -42,20 +44,20 @@ app.post('/api/upload', async (req, res) => {
             upload_preset: 'wedding_uploads'
         })
         console.log(uploadedMedia);
-        res.json({msg: 'yayaa'})
+        res.json({ msg: 'yayaa' })
 
     } catch (error) {
         console.error(error)
-        res.status(500).json({err: 'something is off'})
+        res.status(500).json({ err: 'something is off' })
     }
 })
 
-app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'build', 'index.html');
-    res.sendFile(index);
-  });
+// app.get('*', function (req, res) {
+//     const index = path.join(__dirname, 'build', 'index.html');
+//     res.sendFile(index);
+// });
 
-app.listen(PORT, ()=> {
+app.listen(PORT, () => {
     console.log(`listening on PORT ${PORT}`);
 });
 
