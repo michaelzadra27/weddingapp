@@ -47,8 +47,8 @@ app.post('/api/upload', async (req, res) => {
         res.json({ msg: 'yayaa' })
 
     } catch (error) {
-        console.error(error)
-        res.status(500).json({ err: 'something is off' })
+        // console.error(error)
+        // res.status(500).json({ err: 'something is off' })
     }
 })
 
