@@ -1,10 +1,12 @@
 import { upload } from '@testing-library/user-event/dist/upload';
 import React from 'react';
 import { useState } from 'react'
+import "./reset.css"
+import "./style.css"
 
 function UploadPage() {
     const [fileUploadState, setFileUploadState] = useState('');
-    const [chosenFile, setChosenFile] = useState('');
+    
     const [previewSrc, setPreviewSrc] = useState('')
 
     const handleFileUpload = (e) => {
@@ -43,7 +45,7 @@ function UploadPage() {
 
     return (
         <div>
-            <h1>Brenda + Michael</h1>
+            <h1 className="title">Brenda + Michael</h1>
             <h2>Please share your photos with us!</h2>
             <form onSubmit={handleFileSubmit}>
                 <input type="file"
