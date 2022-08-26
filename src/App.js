@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
 import UploadPage from './components/uploadPage';
+import UploadWidget from './components/uploadWidget';
 import Main from './components/main'
 
 function App() {
   return (
     <div className="App">
-      < UploadPage/>
+      {/* < UploadWidget/> */}
       < Main/>
     </div>
   );
