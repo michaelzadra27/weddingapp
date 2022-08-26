@@ -30,7 +30,7 @@ function Main() {
     return (
         <div>
             <div className='main-container'>
-            <h1 className='title'>MAIN</h1>
+            <h1 className='title'>MAIN PAGE</h1>
             {imageIds && imageIds.map((imageId, index) => (
                 <Image
                 key={index}
