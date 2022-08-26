@@ -37,7 +37,6 @@ function Main() {
                 cloudName='dcteqhlcf'
                 publicId={imageId}
                 width="300"
-                height="400"
                 crop="scale"
                 />
             ))}
