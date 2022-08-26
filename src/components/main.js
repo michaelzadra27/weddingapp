@@ -17,6 +17,7 @@ function Main() {
         try {
             const res = await fetch('/api/images');
             const data = await res.json();
+            //randomize by shuffling data here before it gets saved to imageIds variable
             console.log(data)
             setImageIds(data);
         } catch (error) {
