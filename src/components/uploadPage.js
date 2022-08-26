@@ -45,6 +45,7 @@ function UploadPage() {
 
     return (
         <div>
+            <div className="form-container">
             <h1 className="title">Brenda + Michael</h1>
             <h2>Please share your photos with us!</h2>
             <form onSubmit={handleFileSubmit}>
@@ -52,7 +53,8 @@ function UploadPage() {
                     name="image"
                     onChange={handleFileUpload}
                     value={fileUploadState}
-                    className="input-form">
+                    className="input-form"
+                    multiple>
                 </input>
                 <button type="submit" className="submit-btn">Submit</button>
             </form>
@@ -60,6 +62,7 @@ function UploadPage() {
                 <img src={previewSrc} alt='something' style={{ height: '300px' }} />
 
             )}
+            </div>
         </div>
     );
 }

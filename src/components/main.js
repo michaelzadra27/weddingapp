@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {Image} from 'cloudinary-react';
+import {Cloudinary} from "@cloudinary/url-gen";
+
+// Import plugins
+import {AdvancedImage, lazyload, accessibility, responsive, placeholder} from '@cloudinary/react';
+
+import "./reset.css"
+import "./style.css"
 
 function Main() {
 
@@ -22,6 +29,7 @@ function Main() {
 
     return (
         <div>
+            <div className='main-container'>
             <h1 className='title'>MAIN</h1>
             {imageIds && imageIds.map((imageId, index) => (
                 <Image
@@ -29,9 +37,11 @@ function Main() {
                 cloudName='dcteqhlcf'
                 publicId={imageId}
                 width="300"
+                height="400"
                 crop="scale"
                 />
             ))}
+            </div>
         </div>
     );
 }
