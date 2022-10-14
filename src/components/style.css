@@ -48,8 +48,8 @@ font-size: 11px;
 }
 
 .nav-bar {
-    font-family: 'Ephesis';
-    font-size: 2rem;
+    /* font-family: 'Ephesis';
+    font-size: 2rem; */
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -69,5 +69,5 @@ h3 {
     font-family: 'Lato', sans-serif;
 font-family: 'Merriweather', serif;
 font-family: 'Playfair Display', serif;
-font-family: 'Poppins', sans-serif!important;
+font-family: 'Poppins', sans-serif;
 }
