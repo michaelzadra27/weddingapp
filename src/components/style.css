@@ -1,5 +1,6 @@
 .title {
-    color: #ffffff
+    font-family: 'Ephesis';
+    font-size: 2.5rem;
     
 }
 
@@ -48,8 +49,8 @@ font-size: 11px;
 }
 
 .nav-bar {
-    /* font-family: 'Ephesis';
-    font-size: 2rem; */
+    font-family: 'Ephesis';
+    font-size: 2rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -66,8 +67,5 @@ p {
 }
 
 h3 {
-    font-family: 'Lato', sans-serif;
-font-family: 'Merriweather', serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Poppins', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
 }
