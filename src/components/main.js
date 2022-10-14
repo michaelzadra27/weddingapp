@@ -52,7 +52,7 @@ function Main() {
                     </h1>
                     <p className='sub-title'>10.15.22</p>
                 </nav>
-                <h3>We want to see what you captured!</h3>
+                <h3>Share what you captured to our site!</h3>
                 <div className="form-container">
                     <button id="upload_widget" className="upload-button" onClick={handleOpenWidget}>Upload Pictures</button>
                 </div>
