@@ -9,11 +9,13 @@ function UploadPage() {
     
     const [previewSrc, setPreviewSrc] = useState('')
 
+    //get file on click and set to preview
     const handleFileUpload = (e) => {
         const file = e.target.files[0]
         preview(file);
     };
 
+ //preview file selected using reader and converting to base64encodedimage   
     const preview = (file) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
