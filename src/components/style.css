@@ -48,7 +48,7 @@ font-size: 11px;
 }
 
 .nav-bar {
-    font-family: 'Ephesis', cursive;
+    font-family: 'Ephesis';
     font-size: 2rem;
     display:flex;
     flex-direction: column;
